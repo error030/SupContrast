@@ -139,12 +139,15 @@ def resnet50(**kwargs):
 def resnet101(**kwargs):
     return ResNet(Bottleneck, [3, 4, 23, 3], **kwargs)
 
+def resnet_mini(**kwargs):
+    return ResNet(BasicBlock, [1, 1, 1, 1], **kwargs)
 
 model_dict = {
     'resnet18': [resnet18, 512],
     'resnet34': [resnet34, 512],
     'resnet50': [resnet50, 2048],
     'resnet101': [resnet101, 2048],
+    'resnet_mini':[resnet_mini,512]
 }
 
 
